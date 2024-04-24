@@ -1,0 +1,98 @@
+/* DatePickerStyles.css */
+:root {
+  --white: #fcfbfbff;
+  --isabelline: #f8f4f1ff;
+  --outer-space: #464747ff;
+  --eerie-black: #212120ff;
+  --linen: #fbede3ff;
+  --saffron: #f4c545ff;
+  --violet-web-color: #ff91e8ff;
+  --french-rose: #e84c84ff;
+  --vista-blue: #91a8ecff;
+  --persian-green: #21a092ff;
+}
+
+.input {
+  border: 2px solid var(--eerie-black);
+  border-radius: 0.5rem;
+  box-shadow: 3px 3px 0 0 var(--outer-space);
+  transition: box-shadow 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.input:hover {
+  box-shadow: 6px 6px 0 0 var(--outer-space);
+}
+
+.datePickerDropdown {
+  position: absolute;
+  width: 20rem;
+  z-index: 1000;
+  top: 35px;
+}
+
+.datePickerContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid var(--outer-space);
+  border-radius: 0.5rem;
+  padding: 10px;
+  background-color: var(--linen);
+  font-family: Cabin, sans-serif;
+  font-weight: 400;
+  box-shadow: 6px 6px 0 0 var(--outer-space);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.monthNavigationButton {
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.monthNavigationButton:hover {
+  text-decoration: underline;
+}
+
+.daysOfWeek {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.day {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+.dateGrid .day {
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.dateGrid .day:hover {
+  background-color: black; /* Bold contrast on hover */
+  color: white; /* Text color change for readability */
+}
+
+.dateGrid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.otherMonth {
+  color: #ccc;
+}
